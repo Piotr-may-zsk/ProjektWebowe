@@ -45,6 +45,7 @@ describe('Osoby', () => {
         cy.get('input[name=name]').type("Mariusz")
         cy.get('textarea[name=description]').type("Jest zlym czlowiekiem")
         cy.get('button.btn-primary').click()
+        cy.url().should('include', '/targets')
         cy.get('.name-location').last().then((lastElement) => {
             cy.wrap(lastElement).should('contain.text', 'Mariusz');
         });
