@@ -49,7 +49,7 @@ export default function ReportView() {
 
     return (
         <div className="ReportView">
-            <button className={'btn btn-secondary'} onClick={() => setShowFilters(!showFilters)}>
+            <button id={"filters"} className={'btn btn-secondary'} onClick={() => setShowFilters(!showFilters)}>
                 {showFilters ? "Ukryj filtry" : "Pokaż filtry"}
             </button>
 
@@ -95,7 +95,7 @@ export default function ReportView() {
                     <div className={"d-flex gap-2"}>
                         <input type="reset" value="Wyczyść filtry"
                                className="btn btn-secondary"/>
-                        <button type="button" className="btn btn-primary"
+                        <button type="button" id={'applyFilters'} className="btn btn-primary"
                                 onClick={refresh}>Filtruj
                         </button>
                     </div>

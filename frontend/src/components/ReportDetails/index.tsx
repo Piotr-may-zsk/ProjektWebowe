@@ -136,7 +136,7 @@ export default function ReportDetails() {
                 <p>Szczegóły: {reportData.details}</p>
                 <p>Zgłaszający: {reportData.creator?.name} ({reportData.creator?.reliability})</p>
                 {reportData.creator?.id === auth.id as any ?
-                    <ActualityButton reportId={parseInt(reportId as string)} isActive={reportData.actual}/>
+                    <ActualityButton   reportId={parseInt(reportId as string)} isActive={reportData.actual}/>
                     :
                     (
                         <div className="d-flex">
