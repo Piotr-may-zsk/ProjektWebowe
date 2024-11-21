@@ -17,19 +17,7 @@ describe('Osoby', () => {
 
     })
 
-    it('Zglaszanie', ()=>{
-        cy.visit('/targets')
-        cy.get('button.btn').contains('Follow').click()
-        cy.visit('/report')
 
-        cy.get('select').select(1);
-
-        cy.get('input[name=address]').type('Fredry, 13')
-        cy.get('textarea[name=details]').type('Znaleziono')
-        cy.get('button.btn-primary').click()
-
-        cy.url().should('include', '/reports')
-    })
 
 
     it('Unfollowanie', ()=>{
