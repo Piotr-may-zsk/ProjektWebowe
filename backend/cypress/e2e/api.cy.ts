@@ -29,7 +29,6 @@ describe('API Tests', () => {
     });
 
 
-
     describe('Targets', () => {
 
         it('Delete target', () => {

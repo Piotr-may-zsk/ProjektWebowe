@@ -32,4 +32,12 @@ describe('Likowanie', ()=>{
             expect(val1 + 1).to.equal(val2); // Ensure the values are equal
         });
     })
+
+    it('Wylogowywanie',()=>{
+        Cypress.session.clearAllSavedSessions()
+        cy.visit('/')
+        cy.loginViaUi({email: 'konto@wp.pl', password: '!Admin1234'})
+        cy.get('button.btn-outline-danger').contains("Wyloguj się").click()
+        cy.getCookie('_auth').should('not.exist')
+    })
 })
